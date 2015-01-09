@@ -28,6 +28,15 @@
               <li><%= link_to "All Music", musics_path%></li>
               <li><%= link_to "Contact", "https://www.linkedin.com/in/saipathyam"%></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? %>
+              <li> <%= link_to current_user.email, edit_user_registration_path %> </li>
+              <li> <%= link_to "Logout", logout_path%> </li>
+              <% else %>
+              <li> <%= link_to "Register", register_path %> </li>
+              <li> <%= link_to "Login", login_path %> </li>
+              <% end %> 
+            </ul>
           </div><!--/.nav-collapse -->
            </div><!--/.container-fluid -->
       </nav>
