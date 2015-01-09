@@ -3,7 +3,7 @@
 <h1>Music List!!!</h1>
 </div>
 <div class="col-md-6">
-<table class="table table-striped">
+<table class="table table-striped sortable">
   <thead>
     <tr>
       <th>Name</th>
@@ -23,13 +23,13 @@
         <td><%= music.size %></td>
         <div class="meta">
         <td><%= link_to 'Details', music %></td>
-      <div class="status">
-      <span class="admin">
-        <td><%= link_to 'Edit', edit_music_path(music) %></td> 
-        <td><%= link_to 'Delete', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="musics">
+          <span class="admin">
+            <td><%= link_to 'Edit', edit_music_path(music) %></td> 
+            <td><%= link_to 'Delete', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </span>
         </div>
       </div>
-        <span>
       </tr>
     <% end %>
   </tbody>

@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="container">
-    <%= f.input :name %><br>
-    <%= f.input :format %><br>
-    <%= f.input :length %><br>
-    <%= f.input :size %>
-  </div>
-  <div class="form-actions">
+  <div class="navbar form-signin well">
+    <%= f.input :name, placeholder: 'Music Name' %>
+    <%= f.input :format,placeholder: 'Mp3,Mp4,..etc..' %>
+    <%= f.input :length, placeholder: 'HH:MM:SS' %>
+    <%= f.input :size, placeholder: 'Mb,Gb' %>
     <%= f.button :submit %>
   </div>
+  <div class="container">
+    </div>
 <% end %>

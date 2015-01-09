@@ -5,11 +5,11 @@
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <title>Musicmanager</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track', 'sorttable' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div>
+	<div class="container">
 	<nav class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -19,46 +19,23 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:3000">Music Manager</a>
+            <%= link_to "Music Manager", "https://saisoundmanager.herokuapp.com", class: "navbar-brand" %>
+            <!--<a class="navbar-brand" href="http://localhost:3000">Music Manager</a> -->
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><%= link_to "New Music", new_music_path%></li>
               <li><%= link_to "All Music", musics_path%></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <% if user_signed_in? %>
-              <li> <%= link_to current_user.email, edit_user_registration_path %> </li>
-              <li> <%= link_to "Logout", logout_path%> </li>
-              <% else %>
-              <li> <%= link_to "Register", register_path %> </li>
-              <li> <%= link_to "Login", login_path %> </li>
-              <% end %> 
+              <li><%= link_to "Contact", "https://www.linkedin.com/in/saipathyam"%></li>
             </ul>
           </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
+           </div><!--/.container-fluid -->
       </nav>
 <div class="container">
-<div class="container">
-  <% if flash[:notice] %>
-  <div class="alert alert-success" role="alert">
-    <button class="close" data-dismiss="alert" >x</button>
-    <%= flash[:notice] %>
-    <% end %>
-  </div>
-
-       <% if flash[:notice] %>
-  <div class="alert alert-success" role="alert">
-    <button class="close" data-dismiss="alert" >x</button>
-    <%= flash[:notice] %>
-    <% end %>
 	<%= yield %>
 </div>
-<footer class="footer">
-      <div class="container">
-        <p class="text-muted"> © Sai Charan Pathyam</p>
-      </div>
-    </footer>
+ 
 </body>
+  
+       
 </html>
