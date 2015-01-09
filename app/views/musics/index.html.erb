@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="page-header">
+<h1>Music List!!!</h1>
+</div>
+<div class="col-md-6">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Format</th>
+      <th>Length</th>
+      <th>Size</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @musics.each do |music| %>
+      <tr>
+        <td><strong><%= music.name %></strong></td>
+        <td><%= music.format %></td>
+        <td><%= music.length %></td>
+        <td><%= music.size %></td>
+        <div class="meta">
+        <td><%= link_to 'Details', music %></td>
+      <div class="status">
+      <span class="admin">
+        <td><%= link_to 'Edit', edit_music_path(music) %></td> 
+        <td><%= link_to 'Delete', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
+      </div>
+        <span>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+</div>

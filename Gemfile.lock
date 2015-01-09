@@ -165,6 +165,9 @@ GEM
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
     sexp_processor (4.4.4)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -213,6 +216,7 @@ DEPENDENCIES
   rails_12factor
   railsstrap!
   sass-rails (~> 4.0)
+  simple_form
   therubyracer
   uglifier (>= 1.0.3)
   unicorn

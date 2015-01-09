@@ -1,0 +1,23 @@
+<%= simple_form_for(@music, html: {class: "form-horizontal"}) do |f| %>
+  <% if @music.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@music.errors.count, "error") %> prohibited this music from being saved:</h2>
+
+      <ul>
+      <% @music.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+    <%= f.input :name %><br>
+    <%= f.input :format %><br>
+    <%= f.input :length %><br>
+    <%= f.input :size %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

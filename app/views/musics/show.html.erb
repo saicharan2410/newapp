@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div >
+    <div class="col-sm-4" >
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Music Details</h3>
+            </div>
+            <div class="panel-body">
+              <p>
+              	<strong>Name:</strong>
+              	<%= @music.name %>
+              </p>
+              <p>
+              	<strong>Format:</strong>
+              	<%= @music.format %>
+              </p>
+              <p>
+                <strong>Length:</strong>
+                <%= @music.length %>
+            </p>
+            <p>
+              <strong>Size:</strong>
+              <%= @music.size %>
+          </p>
+            </div>
+          </div>
+          <%= link_to 'Edit', edit_music_path(@music), class: "btn btn-default btn-xs" %>
+<%= link_to 'Back', musics_path, class: "btn btn-default btn-xs" %>
+        </div>
+
+
+</div>
