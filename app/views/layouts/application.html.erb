@@ -9,6 +9,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
 	<div class="container">
 	<nav class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -20,7 +21,6 @@
               <span class="icon-bar"></span>
             </button>
             <%= link_to "Music Manager", "https://saisoundmanager.herokuapp.com", class: "navbar-brand" %>
-            <!--<a class="navbar-brand" href="http://localhost:3000">Music Manager</a> -->
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -38,7 +38,7 @@
               <% end %> 
             </ul>
           </div><!--/.nav-collapse -->
-           </div><!--/.container-fluid -->
+        </div><!--/.container-fluid -->
       </nav>
 <div class="container">
 	<%= yield %>
